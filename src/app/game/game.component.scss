@@ -1,0 +1,19 @@
+.game {
+  &__form {
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1rem;
+  }
+
+  &__greeting {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  &__footer {
+    padding-top: 3rem;
+  }
+}

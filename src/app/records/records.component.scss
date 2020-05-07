@@ -1,0 +1,27 @@
+@import '../../palette.scss';
+
+.records {
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 50px auto;
+  }
+
+  &__header {
+    padding: 10px;
+    background: $orange;
+    color: $white;
+    font-weight: bold;
+  }
+
+  &__cell {
+    padding: 10px;
+    text-align: center;
+  }
+
+  &__row {
+    &:nth-of-type(odd) {
+      background: $white;
+    }
+  }
+}

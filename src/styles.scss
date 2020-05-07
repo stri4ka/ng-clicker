@@ -1,0 +1,112 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import './palette.scss';
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  background: $bg-color;
+
+  h1 {
+    margin: 0;
+    padding: 40px 0;
+    font-size: 4rem;
+    font-weight: 100;
+  }
+
+  a {
+    color: $red;
+    font-weight: 900;
+  }
+}
+
+.block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: $red;
+}
+
+.form {
+
+  &__field {
+    padding-bottom: 3rem;
+  }
+
+  &__input {
+    margin: 0 0 8px 0;
+    padding: 0;
+    height: 3rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $grey;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: none;
+    transition: box-shadow .3s, border .3s;
+  }
+
+  &__select {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $grey;
+    outline: none;
+    height: 2rem;
+    line-height: 2rem;
+    width: 100%;
+    padding: 0;
+    display: block;
+  }
+}
+
+.button {
+  padding: 0;
+  color: $white;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &--play {
+    font-size: 2rem;
+    font-weight: 300;
+    width: 20rem;
+    height: 20rem;
+    background: $red;
+    border-radius: 100%;
+
+    &:hover {
+      background: lighten($color: $red, $amount: 10);
+    }
+  }
+
+  &--square {
+    padding: .5rem 1rem;
+    margin-right: 1rem;
+    background: $orange;
+    font-size: .9rem;
+  }
+
+  &--restart {
+    background: $red;
+  }
+
+  &--start {
+    animation: shadow-pulse 1s 3;
+  }
+}
+
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+
+  100% {
+    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+  }
+}

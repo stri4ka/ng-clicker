@@ -1,0 +1,9 @@
+@import '../../palette.scss';
+
+.result__link {
+  background: $white;
+  color: $orange;
+  border: 1px solid $orange;
+  text-transform: uppercase;
+  text-decoration: none;
+}

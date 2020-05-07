@@ -1,0 +1,26 @@
+<div class="block">
+  <div *ngIf="records.length; else noRecords" class="records">
+    <h1 class="records__title title">Clicker Game Records</h1>
+    <a class="records__link" routerLink="/results">Go back</a>
+    <table class="records__table">
+      <tr class="records__row">
+        <th class="records__header">No.</th>
+        <th class="records__header">Name</th>
+        <th class="records__header">Time</th>
+        <th class="records__header">Clicks</th>
+        <th class="records__header">Clicks per sec</th>
+      </tr>
+      <tr class="records__row" *ngFor="let item of records; index as i">
+        <td class="records__cell">{{ i + 1 }}</td>
+        <td class="records__cell">{{ item.playerName }}</td>
+        <td class="records__cell">{{ item.time }}</td>
+        <td class="records__cell">{{ item.clickCount}}</td>
+        <td class="records__cell">{{ item.countPerSec }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<ng-template #noRecords>
+  <h1 class="records__title title">Clicker Game Records</h1>
+  <p>No records now</p>
+</ng-template>

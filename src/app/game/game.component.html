@@ -1,0 +1,22 @@
+<div class="block">
+  <div class="game">
+    <h1 class="game__title title">Clicker Game</h1>
+    <div class="game__greeting">Hello <strong>{{playerName}}</strong>! Let's start the game.</div>
+    <div class="game__form">
+      <span class="game__timer">Timer: </span>
+      <form [formGroup]="form" class="form">
+        <select formControlName="time" class="form__select">
+          <option *ngFor="let time of timer" [ngValue]="time" class="form__option">
+            {{ time }}
+          </option>
+        </select>
+      </form>
+    </div>
+  </div>
+  <div class="game__footer">
+    <div class="game__control">
+      <button class="button button--play" (click)="startGame()">{{buttonTitle}}</button>
+    </div>
+    <p *ngIf="gameProgress" class="game__timer">Time left: <strong>{{Timer.gameTime}} sec</strong></p>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="block">
+  <div class="results">
+    <h1 class="results__title title">Clicker game</h1>
+    <p>Player: <strong>{{playerName}}</strong></p>
+    <p>Time: <strong>{{time}} sec</strong></p>
+    <p>Clicks per sec: <strong>{{countPerSec }}</strong></p>
+    <p>Clicks total: <strong>{{score}}</strong></p>
+    <p><strong>{{ message }}</strong></p>
+    <div class="results__controls">
+      <button class="button button--square" (click)="onChangePlayer()">Change player</button>
+      <button class="button button--square button--restart" (click)="restartGame()">Restart</button>
+      <a class="result__link button--square" routerLink="/records">Check records</a>
+    </div>
+  </div>
+</div>
